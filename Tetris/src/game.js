@@ -34,4 +34,25 @@ export default class Game {
             [0,0,0]
         ]
     };
+
+    movePieceLeft() {
+        this.activePiece.x -= 1;
+    }
+
+    movePieceRight() {
+        this.activePiece.x += 1;
+    }
+
+    movePieceDown() {
+        this.activePiece.y += 1;
+    }
+
+    //check if tetromino isn't out of field
+    isPieceOutOfBounds(){
+        const {}        //деструктуризація
+        return this.playfield[this.activePiece.y] === undefined || this.playfield[this.activePiece.y][this.activePiece.x] === undefined;
+
+    }
 }
+
+
