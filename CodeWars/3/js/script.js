@@ -6,15 +6,38 @@
                             //solution('abc', 'bc') // returns true
                             //solution('abc', 'd') // returns false
 
+// ==========================  1  ================================
+
+// function solution(str, ending){
+//     if (str.substr(-ending.length) === ending){
+//         return true
+//     }  else if (ending.length == '') {
+//         return true;
+//     }
+//     else {
+//         return false;
+//     }
+// }
+// console.log(solution('abcdf', ''));
+
+// ============================  2  =================================
+
+// function solution(str, ending){
+//     if(str.substr(-ending.length) === ending || ending.length == ''){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+// console.log(solution('abcdf', 'df'));
+
+//==============================  fcw ================================
 
 function solution(str, ending){
-    if (str.substr(-ending.length) === ending){
-        return true
-    }else {
-        return false;
-    }
+    return str.endsWith(ending);
 }
-console.log(solution('abcdf', 'cdf'));
+console.log(solution('abcdf', ''));
+
 
 
 
